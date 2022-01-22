@@ -20,12 +20,8 @@ class SidePanelView: FrameLayout{
         initView()
     }
 
-    fun showPanel() {
-
-    }
-
     private fun initView() {
-        setWillNotDraw(false)
+
     }
 
 }
