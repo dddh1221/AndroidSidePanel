@@ -133,7 +133,6 @@ class SidePanelLayout: FrameLayout, IPanelDataProvider,
         }
 
         if(isTouchedSlider(event) && getPanelState() == SidePanelGestureController.STATE_CLOSED || getPanelState() == SidePanelGestureController.STATE_DRAGGING) {
-            Log.e("oh", "you touched slider")
             event?.let { panelGestureController.onTouchEvent(it) }
             return true
         }

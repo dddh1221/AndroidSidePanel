@@ -23,10 +23,7 @@ class SidePanelGestureController(
      * 패널의 현재 상태
      */
     var panelState: Int = STATE_CLOSED
-        private set(value) {
-            Log.e("hi", "state chage : $value")
-            field = value
-        }
+        private set
 
     /**
      * 슬라이드 중인 방향
@@ -88,7 +85,6 @@ class SidePanelGestureController(
     }
 
     override fun onSingleTapUp(e: MotionEvent?): Boolean {
-        Log.e("hi", "singleTapUp: $panelState")
         return if(panelState == STATE_CLOSED) {
             requestOpen()
             true
