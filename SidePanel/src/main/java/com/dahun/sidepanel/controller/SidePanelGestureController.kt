@@ -63,13 +63,13 @@ class SidePanelGestureController(
         gestureDetector.onTouchEvent(event)
 
         if(event.actionMasked == MotionEvent.ACTION_UP) {
-            Log.w("event", "action up, idle direction ${getPanelIdleDirection()}")
             when(getPanelIdleDirection()) {
                 DIRECTION_LEFT -> requestOpen()
                 DIRECTION_RIGHT -> requestClose()
                 DIRECTION_IDLE -> {
                     if(panelTranslationX == 0f) panelState = STATE_OPENED
                     else if(panelTranslationX == dataProvider.getPanelWidth().toFloat()) panelState = STATE_CLOSED
+
                 }
             }
         }
@@ -153,8 +153,8 @@ class SidePanelGestureController(
     private fun move(translation: Float) {
         slideDirection = when {
             translation > 0f -> DIRECTION_LEFT
-            translation == 0f -> DIRECTION_IDLE
-            else -> slideDirection
+            translation == 0f -> slideDirection
+            else -> DIRECTION_RIGHT
         }
 
         panelTranslationX = when(slideDirection) {
