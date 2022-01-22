@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SidePanelAttr">
+        <attr name="defaultClosed" format="boolean"/>
+        <attr name="slideSensitive" format="float"/>
+        <attr name="maxDimAlpha" format="float"/>
+        <attr name="dimBackgroundColor" format="color"/>
+    </declare-styleable>
+</resources>

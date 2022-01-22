@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AndroidSidePanel-Demo</string>
+
+    <string name="description">This app is a demo of the Android side panel library. Panels should always be drawn on top of all widgets. Please refer to the following link for more details!</string>
+    <string name="panel_background_description">Other widgets can also be added within the Layout. Widgets other than SidePanelView are treated as a background and the same Alpha value is applied.</string>
+    <string name="panel_description">Panels should always be glued to the right side. If you put a SidePanelView as a SidePanelLayout child view, it will automatically position itself. A SidePanelView should not have a Margin on the right side.</string>
+</resources>
